@@ -1,0 +1,7 @@
+.Divider {
+    width: 30%;
+    height: 1px;
+    border-top: 1px solid #333;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

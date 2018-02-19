@@ -1,0 +1,18 @@
+* {
+    color: #333;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h1.title {
+    font-size: 4rem;
+    margin: 0;
+    width: 320px;
+    text-align: center;
+}
+
+p {
+    margin: 0;
+}

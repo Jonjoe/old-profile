@@ -1,0 +1,8 @@
+.Projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin: 15px 0;
+}

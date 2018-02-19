@@ -1,0 +1,10 @@
+.Section {
+    width: 100%;
+}
+.Section-isFullWidth {}
+.Section-isCentered {
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
