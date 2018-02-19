@@ -7,3 +7,5 @@ export { Column } from './Column';
 export { Divider } from './Divider';
 export { ShadowDiv } from './ShadowDiv';
 export { Intro } from './Intro';
+export { Skills } from './Skills';
+export { Skill } from './Skill';

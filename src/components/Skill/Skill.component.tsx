@@ -1,7 +1,7 @@
 /*
-  | App Component ============================================
+  | Skill Component ============================================
   ------------------------------------------------------------------
-  | Component for rendering a list of notes.
+  | Component for rendering a Skill.
 */
 
 // Imports =========================================================
@@ -9,50 +9,44 @@
 // Base Imports
 import * as React from 'react';
 
-// Module Imports
-// import workedWith from '../../data/workedWith';
-
-// Component Imports
-import {
-  Section,
-  SocialLinks,
-  Skills,
-  // Projects,
-  Divider,
-  Intro
-} from '../../components';
-// ...
-
 // Interfaces ======================================================
 // -----------------------------------------------------------------
 interface State {}
-interface Props {}
+interface Props {
+  name: string;
+  score: number;
+}
 
 // React Component Class ===========================================
 // -----------------------------------------------------------------
-class App extends React.Component<Props, State> {
+class Skill extends React.Component<Props, State> {
   // Class constructor
   constructor(props: Props) {
     super(props);
   }
 
+  getBarWidth = (score: number): string => {
+    return `${score}0%`;
+  };
+
   render(): JSX.Element {
+    const { name, score } = this.props;
+
     return (
-      <main>
-        <Section layout="centered">
-          <Intro />
-          <Divider />
-
-          <Skills />
-          <Divider />
-
-          <SocialLinks />
-        </Section>
-      </main>
+      <div className="Skill">
+        <span className="Skill_Name">{name}</span>
+        <div style={{ width: this.getBarWidth(score) }} className="Skill_Bar">
+          <span className="Skill_Score">{score}</span>
+        </div>
+      </div>
     );
   }
 }
 
+// Styles ==========================================================
+// -----------------------------------------------------------------
+import './Skill.css';
+
 // Exports =========================================================
 // -----------------------------------------------------------------
-export default App;
+export default Skill;

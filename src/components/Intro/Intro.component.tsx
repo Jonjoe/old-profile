@@ -10,7 +10,7 @@
 import * as React from 'react';
 
 // Module Imports
-import { ShadowDiv } from '../../components';
+import { ShadowDiv, SocialLinks } from '../../components';
 
 // Component Imports
 // ...
@@ -32,7 +32,11 @@ class Intro extends React.Component<Props, State> {
     return (
       <ShadowDiv>
         <h1 className="title">Jonjoe Whitfield</h1>
-        <p>Engineer, Hacker, Pretend Designer, Javascript/Typescript Fanboy</p>
+        <p style={{ marginTop: 50, marginBottom: 50 }}>
+          Engineer, Hacker, Pretend Designer, JS/Typescript Fanboy, S.O.L.I.D
+          Engineer & Craftsman
+        </p>
+        <SocialLinks />
       </ShadowDiv>
     );
   }

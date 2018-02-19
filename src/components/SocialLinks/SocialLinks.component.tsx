@@ -26,24 +26,52 @@ class SocialLinks extends React.Component<Props, State> {
   render(): JSX.Element {
     return (
       <div className="SocialLinks">
-        <a className="SocialLinks_Link">
+        <a
+          href="https://www.linkedin.com/in/jonjoe/"
+          target="blank"
+          className="SocialLinks_Link"
+        >
           <Icon name="linkedin" />
         </a>
 
-        <a className="SocialLinks_Link">
+        <a
+          href="https://twitter.com/_jonjoe"
+          target="blank"
+          className="SocialLinks_Link"
+        >
           <Icon name="twitter" />
         </a>
 
-        <a className="SocialLinks_Link">
+        <a
+          href="https://github.com/jonjoe"
+          target="blank"
+          className="SocialLinks_Link"
+        >
           <Icon name="github" />
         </a>
 
-        <a className="SocialLinks_Link">
+        <a
+          href="mailto:me@jonjoe.io"
+          target="blank"
+          className="SocialLinks_Link"
+        >
           <Icon name="envelope" />
         </a>
 
-        <a className="SocialLinks_Link">
-          <Icon name="phone" />
+        <a
+          href="https://codepen.io/jonjoe/"
+          target="blank"
+          className="SocialLinks_Link"
+        >
+          <Icon name="codepen" />
+        </a>
+
+        <a
+          href="https://dribbble.com/jonjoe"
+          target="blank"
+          className="SocialLinks_Link"
+        >
+          <Icon name="dribbble" />
         </a>
       </div>
     );

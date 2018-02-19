@@ -1,7 +1,7 @@
 /*
-  | App Component ============================================
+  | Skills Component ============================================
   ------------------------------------------------------------------
-  | Component for rendering a list of notes.
+  | Component for rendering a Skills.
 */
 
 // Imports =========================================================
@@ -10,18 +10,10 @@
 import * as React from 'react';
 
 // Module Imports
-// import workedWith from '../../data/workedWith';
+import skillsData from '../../data/skills';
 
 // Component Imports
-import {
-  Section,
-  SocialLinks,
-  Skills,
-  // Projects,
-  Divider,
-  Intro
-} from '../../components';
-// ...
+import { Skill } from '../../components';
 
 // Interfaces ======================================================
 // -----------------------------------------------------------------
@@ -30,7 +22,7 @@ interface Props {}
 
 // React Component Class ===========================================
 // -----------------------------------------------------------------
-class App extends React.Component<Props, State> {
+class Skills extends React.Component<Props, State> {
   // Class constructor
   constructor(props: Props) {
     super(props);
@@ -38,21 +30,19 @@ class App extends React.Component<Props, State> {
 
   render(): JSX.Element {
     return (
-      <main>
-        <Section layout="centered">
-          <Intro />
-          <Divider />
-
-          <Skills />
-          <Divider />
-
-          <SocialLinks />
-        </Section>
-      </main>
+      <article className="Skills">
+        {skillsData.map((skill, index) => {
+          return <Skill key={index} name={skill.name} score={skill.score} />;
+        })}
+      </article>
     );
   }
 }
 
+// Styles ==========================================================
+// -----------------------------------------------------------------
+import './Skills.css';
+
 // Exports =========================================================
 // -----------------------------------------------------------------
-export default App;
+export default Skills;
